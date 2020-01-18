@@ -1,0 +1,5 @@
+Usage: ./phar-builder.phar <dir> <outFile> [-m <mainFile>] [-l <loaderFile>]
+
+-h, --help              Print this help message
+-l, --loaderFile <file> Set the file used for load the phar when include
+-m, --mainFile <file>   Set the file used when the phar is directly executed

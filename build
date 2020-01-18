@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+// build from CLI:
+// ./phar-builder.phar src phar-builder.phar -m cli.php -l phar-builder.php
+
+// require_once 'src/phar-builder.php';
+require_once 'src/phar-builder.php';
+
+(new PharBuilder\PharBuilder('src/', 'phar-builder.phar'))
+    ->createStubMainAndLoader('cli.php', 'phar-builder.php')
+    ->createPhar()
+    ->printSize();
